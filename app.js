@@ -77,3 +77,40 @@ function uzunlikTopish(s, b) {
   let b = 6;
   uzunlikTopish(s, b);
 
+  function findNumberOfDays(month) {
+    var numberOfDays;
+  
+    switch (month) {
+      case 1: // Yanvar
+      case 3: // Mart
+      case 5: // May
+      case 7: // Iyul
+      case 8: // Avgust
+      case 10: // Oktabr
+      case 12: // Dekabr
+        numberOfDays = 31;
+        break;
+      case 4: // Aprel
+      case 6: // Iyun
+      case 9: // Sentabr
+      case 11: // Noyabr
+        numberOfDays = 30;
+        break;
+      case 2: // Fevral
+        numberOfDays = 28;
+        break;
+      default:
+        numberOfDays = -1; // Noto'g'ri oy raqami
+    }
+  
+    return numberOfDays;
+  }
+  
+  // Oy raqamini o'qish
+  var month = 2;
+  
+  // Kunlar sonini topish
+  var days = findNumberOfDays(month);
+  
+  // Natijani chiqarish
+  console.log(" bu oyda " + days + " kun bor.");
